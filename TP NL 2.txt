@@ -1,0 +1,57 @@
+		local player = game.Players.LocalPlayer
+		local library = loadstring(game:HttpGet('https://pastebin.com/raw/Cz1cDh3Y',true))()
+		library.options.underlinecolor = 'rainbow'
+ 
+ 		local Misc = library:CreateWindow('Misc')
+ 
+ 		local MaxJump = Misc:Button('Max Jump', function()
+                while true do
+                                    wait(.0)
+                game.Players.LocalPlayer.multiJumpCount.Value = '999'
+                end
+                end)
+                
+		local Teleports = library:CreateWindow('KOTH')
+
+		local KOTH = Teleports:Button('KOTH', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-353, 172, 11)
+		end)
+		
+		local Teleports = library:CreateWindow('Islands')
+
+		local Ground = Teleports:Button('Ground', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-1, 114, 166)
+		end)
+		local Island = Teleports:Button('Island 1', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (0, 1468, 67)
+		end)
+		local Island = Teleports:Button('Island 2', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (3, 3058, 63)
+		end)
+		local Island = Teleports:Button('Island 3', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (0, 4682, 64)
+		end)
+		local Island = Teleports:Button('Island 4', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-9, 6312, 68)
+		end)
+		local Island = Teleports:Button('Island 5', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (0, 8632, 61)
+		end)
+		local Secret Island = Teleports:Button('Secret island', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (2394, 108, 997)
+		end)
+		
+		local Teleports = library:CreateWindow('Training area')
+
+		local Training = Teleports:Button('Ancient Master Blade', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-248, 113, 351)
+		end)
+		local Training = Teleports:Button('Broken Spaceships', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-248, 113, 351)
+		end)
+		local Training = Teleports:Button('Soul Fusion Arena', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (317, 125, -189)
+		end)
+		local Training = Teleports:Button('Forgotton Sanctuary', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (1138, 6253, 847)
+		end)
