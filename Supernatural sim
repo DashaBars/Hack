@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet(('https://pastebin.com/raw/744ZpYPm')))()
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/DashaBars/Hack/main/Black%20GUI')))()
 
 local w = library:CreateWindow("Supernatural Simulator")
 
