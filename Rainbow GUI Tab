@@ -1,7 +1,7 @@
 local function randomName()
 	local data = ""
 	for i=0,20,1 do
-		data = data .. tostring(string.char(math.ceil(math.random() * 228)))
+		data = data .. tostring(string.char(math.ceil(math.random() * 254)))
 	end
 	return data
 end
@@ -73,7 +73,7 @@ function library:CreateTab(name, rainbow, color)
 		BackgroundColor3 = Color3.new(1, 1, 1),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, (tabcount)*13+(tabcount-1)*200, 0.0128041022, 0),
-		Size = UDim2.new(0, 200, 0, 25),
+		Size = UDim2.new(0, 180, 0, 25),
 	})
 	local top = self:Create("Frame", {
 		Name = "Top",
@@ -117,14 +117,14 @@ function library:CreateTab(name, rainbow, color)
 		ClipsDescendants = true,
 		BorderSizePixel = 0,
 		Position = UDim2.new(0, -3, 0.801999986, 0),
-		Size = UDim2.new(0.0350000001, 200, 20, 0),
+		Size = UDim2.new(0.0350000001, 180, 20, 0),
 	})
 	local holder2 = self:Create("Frame", {
 		Name = "ButtonHolder",
 		Parent = holder,
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, 3, 0, 0),
-		Size = UDim2.new(0, 200, 0, 20),
+		Size = UDim2.new(0, 180, 0, 0),
 		ZIndex = 0,
 	})
 	local holder3 = self:Create("Frame", {
@@ -133,7 +133,7 @@ function library:CreateTab(name, rainbow, color)
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
 		BorderSizePixel = 0,
 		Position = UDim2.new(0, 0, 0, 0),
-		Size = UDim2.new(0, 200, 0, 0),
+		Size = UDim2.new(0, 180, 0, 0),
 		ZIndex = 0,
 	})
 	local debounce = false
@@ -144,7 +144,7 @@ function library:CreateTab(name, rainbow, color)
 				for i,v in pairs(holder3:GetChildren())do
 					v.ZIndex=0
 				end
-				local tween = TweenService:Create(holder3,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(holder3.Size.Y.Offset+15))})
+				local tween = TweenService:Create(holder3,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(holder3.Size.Y.Offset+20))})
 				tween:Play()
 				tween.Completed:Connect(function()
 					holder3.Visible = false
@@ -176,8 +176,8 @@ function library:MakeButton(tab,text,callback)
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
 		BorderSizePixel = 0,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*32+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 200, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 180, 0, 25),
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text,
 		TextColor3 = Color3.new(1, 1, 1),
@@ -187,7 +187,7 @@ function library:MakeButton(tab,text,callback)
 		callback(button)
 	end)
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*32-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*35-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return button
 end
 
@@ -204,7 +204,7 @@ function library:MakeToggle(tab,text,default,callback)
 		BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647),
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
 		BorderSizePixel = 0,
-		Position = UDim2.new(0.744999945, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*32+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Position = UDim2.new(0.744999945, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
 		Size = UDim2.new(0, 45, 0, 30),
 		ZIndex = 2,
 		Font = Enum.Font.SourceSansSemibold,
@@ -218,7 +218,7 @@ function library:MakeToggle(tab,text,default,callback)
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
 		BorderSizePixel = 0,
 		Position = UDim2.new(-3.18383813, 0, 0, 0),
-		Size = UDim2.new(0, 200, 0, 25),
+		Size = UDim2.new(0, 180, 0, 25),
 		ZIndex = 0,
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text,
@@ -226,7 +226,7 @@ function library:MakeToggle(tab,text,default,callback)
 		TextSize = 18,
 	})
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*32-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*35-(buttoncount[tonumber(tab.Name)]-1)*6)
 	button.MouseButton1Click:Connect(function()
 		if button.Text == "ON" then
 			button.Text = "OFF"
@@ -246,15 +246,15 @@ function library:MakeLabel(tab,text)
 	local label = self:Create("TextLabel", {
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundTransparency = 1,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*32+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 200, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 180, 0, 25),
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text,
 		TextColor3 = Color3.new(1, 1, 1),
 		TextSize = 18,
 	})
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*32-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*35-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return label
 end
 
@@ -269,8 +269,8 @@ function library:MakeBox(tab,text,placeholder,callback)
 	local label = self:Create("TextLabel", {
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundTransparency = 1,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*32+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 200, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 180, 0, 25),
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text .. ":",
 		TextColor3 = Color3.new(1, 1, 1),
@@ -281,8 +281,8 @@ function library:MakeBox(tab,text,placeholder,callback)
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.078431),
 		BorderSizePixel = 0,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*32+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 200, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 180, 0, 25),
 		Font = Enum.Font.SourceSansSemibold,
 		PlaceholderText = placeholder,
 		Text = "",
@@ -293,7 +293,7 @@ function library:MakeBox(tab,text,placeholder,callback)
 		callback(box)
 	end)
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*32-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*35-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return box
 end
 
@@ -306,8 +306,8 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 	local label = self:Create("TextLabel", {
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundTransparency = 1,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*32+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 200, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 180, 0, 25),
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text .. ":",
 		TextColor3 = Color3.new(1, 1, 1),
@@ -318,8 +318,8 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundTransparency = 1,
 		ClipsDescendants = true,
-		Position = UDim2.new(0, -3, 0, (buttoncount[tonumber(tab.Name)]-1)*32+3-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0.0350000001, 200, 0, 785),
+		Position = UDim2.new(0, -3, 0, (buttoncount[tonumber(tab.Name)]-1)*35+3-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0.0350000001, 180, 0, 785),
 	})
 	local frame2 = self:Create("Frame", {
 		Parent = frame,
@@ -327,7 +327,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
 		BorderSizePixel = 0,
 		Position = UDim2.new(0, 9, 0, 3),
-		Size = UDim2.new(0, 200, 0, 20),
+		Size = UDim2.new(0, 180, 0, 0),
 	})
 	local selected = self:Create("TextLabel", {
 		Parent = frame2,
@@ -356,7 +356,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
 		BorderSizePixel = 3,
 		Position = UDim2.new(0, 0, 0, 0),
-		Size = UDim2.new(0, 200, 0, 20),
+		Size = UDim2.new(0, 180, 0, 0),
 		ZIndex = 0,
 		Visible = false
 	})
@@ -368,7 +368,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 				for i,v in pairs(dropdowns:GetChildren())do
 					v.ZIndex=0
 				end
-				local tween = TweenService:Create(dropdowns,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(dropdowns.Size.Y.Offset+15))})
+				local tween = TweenService:Create(dropdowns,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(dropdowns.Size.Y.Offset+20))})
 				tween:Play()
 				tween.Completed:Connect(function()
 					dropdowns.Visible = false
@@ -394,14 +394,14 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		local button = self:Create("TextButton", {
 			Parent = dropdowns,
 			BackgroundTransparency = 1,
-			Position = UDim2.new(0, 0, 0, (i-1)*35+32-(i-1)*6),
+			Position = UDim2.new(0, 0, 0, (i-1)*30+28-(i-1)*6),
 			Size = UDim2.new(0, 188, 0, 29),
 			Font = Enum.Font.SourceSansSemibold,
 			Text = v,
 			TextColor3 = Color3.new(1, 1, 1),
 			TextSize = 18,
 		})
-		dropdowns.Size = UDim2.new(0, 200, 0, i*25)
+		dropdowns.Size = UDim2.new(0, 180, 0, i*30)
 		button.MouseButton1Click:Connect(function()
 			selected.Text = button.Text
 			callback(selected)
@@ -411,7 +411,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 					for i,v in pairs(dropdowns:GetChildren())do
 						v.ZIndex=0
 					end
-					local tween = TweenService:Create(dropdowns,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(dropdowns.Size.Y.Offset+15))})
+					local tween = TweenService:Create(dropdowns,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(dropdowns.Size.Y.Offset+20))})
 					tween:Play()
 					tween.Completed:Connect(function()
 						dropdowns.Visible = false
@@ -435,7 +435,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		end)
 	end
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 150, 0, buttoncount[tonumber(tab.Name)]*32-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 180, 0, buttoncount[tonumber(tab.Name)]*32-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return selected
 end
 
