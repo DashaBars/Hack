@@ -73,7 +73,7 @@ function library:CreateTab(name, rainbow, color)
 		BackgroundColor3 = Color3.new(1, 1, 1),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, (tabcount)*13+(tabcount-1)*200, 0.0128041022, 0),
-		Size = UDim2.new(0, 180, 0, 30),
+		Size = UDim2.new(0, 200, 0, 30),
 	})
 	local top = self:Create("Frame", {
 		Name = "Top",
@@ -91,7 +91,7 @@ function library:CreateTab(name, rainbow, color)
 		Font = Enum.Font.SourceSansSemibold,
 		Text = name,
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 14,
+		TextSize = 18,
 	})
 	local minimize = self:Create("TextButton", {
 		Parent = top,
@@ -101,7 +101,7 @@ function library:CreateTab(name, rainbow, color)
 		Font = Enum.Font.SourceSansSemibold,
 		Text = "-",
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 18,
+		TextSize = 14,
 	})
 	local rainbow = self:Create("Frame", {
 		Parent = top,
@@ -144,7 +144,7 @@ function library:CreateTab(name, rainbow, color)
 				for i,v in pairs(holder3:GetChildren())do
 					v.ZIndex=0
 				end
-				local tween = TweenService:Create(holder3,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(holder3.Size.Y.Offset+20))})
+				local tween = TweenService:Create(holder3,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(holder3.Size.Y.Offset+25))})
 				tween:Play()
 				tween.Completed:Connect(function()
 					holder3.Visible = false
@@ -368,7 +368,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 				for i,v in pairs(dropdowns:GetChildren())do
 					v.ZIndex=0
 				end
-				local tween = TweenService:Create(dropdowns,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(dropdowns.Size.Y.Offset+20))})
+				local tween = TweenService:Create(dropdowns,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(dropdowns.Size.Y.Offset+25))})
 				tween:Play()
 				tween.Completed:Connect(function()
 					dropdowns.Visible = false
@@ -411,7 +411,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 					for i,v in pairs(dropdowns:GetChildren())do
 						v.ZIndex=0
 					end
-					local tween = TweenService:Create(dropdowns,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(dropdowns.Size.Y.Offset+20))})
+					local tween = TweenService:Create(dropdowns,TweenInfo.new(.5),{["Position"]=UDim2.new(0, 0, 0, -1*(dropdowns.Size.Y.Offset+25))})
 					tween:Play()
 					tween.Completed:Connect(function()
 						dropdowns.Visible = false
