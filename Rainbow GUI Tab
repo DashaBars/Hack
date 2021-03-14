@@ -72,15 +72,15 @@ function library:CreateTab(name, rainbow, color)
 		Active = true,
 		BackgroundColor3 = Color3.new(1, 1, 1),
 		BackgroundTransparency = 1,
-		Position = UDim2.new(0, (tabcount)*13+(tabcount-1)*190, 0.0128041022, 0),
-		Size = UDim2.new(0, 190, 0, 37),
+		Position = UDim2.new(0, (tabcount)*13+(tabcount-1)*200, 0.0128041022, 0),
+		Size = UDim2.new(0, 200, 0, 37),
 	})
 	local top = self:Create("Frame", {
 		Name = "Top",
 		Parent = tab,
 		BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647),
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
-		BorderSizePixel = 3,
+		BorderSizePixel = 0,
 		Size = UDim2.new(1, 0, 1, -10),
 	})
 	local title = self:Create("TextLabel", {
@@ -115,7 +115,7 @@ function library:CreateTab(name, rainbow, color)
 		Parent = tab,
 		BackgroundTransparency = 1,
 		ClipsDescendants = true,
-		BorderSizePixel = 3,
+		BorderSizePixel = 0,
 		Position = UDim2.new(0, -3, 0.801999986, 0),
 		Size = UDim2.new(0.0350000001, 200, 20, 0),
 	})
@@ -124,16 +124,16 @@ function library:CreateTab(name, rainbow, color)
 		Parent = holder,
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, 3, 0, 0),
-		Size = UDim2.new(0, 190, 0, 0),
+		Size = UDim2.new(0, 200, 0, 0),
 		ZIndex = 0,
 	})
 	local holder3 = self:Create("Frame", {
 		Parent = holder2,
 		BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647),
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
-		BorderSizePixel = 3,
+		BorderSizePixel = 0,
 		Position = UDim2.new(0, 0, 0, 0),
-		Size = UDim2.new(0, 190, 0, 0),
+		Size = UDim2.new(0, 200, 0, 0),
 		ZIndex = 0,
 	})
 	local debounce = false
@@ -187,7 +187,7 @@ function library:MakeButton(tab,text,callback)
 		callback(button)
 	end)
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 190, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return button
 end
 
@@ -226,7 +226,7 @@ function library:MakeToggle(tab,text,default,callback)
 		TextSize = 16,
 	})
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 190, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
 	button.MouseButton1Click:Connect(function()
 		if button.Text == "ON" then
 			button.Text = "OFF"
@@ -254,7 +254,7 @@ function library:MakeLabel(tab,text)
 		TextSize = 16,
 	})
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 190, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return label
 end
 
@@ -293,7 +293,7 @@ function library:MakeBox(tab,text,placeholder,callback)
 		callback(box)
 	end)
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 190, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return box
 end
 
@@ -319,7 +319,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		BackgroundTransparency = 1,
 		ClipsDescendants = true,
 		Position = UDim2.new(0, -3, 0, (buttoncount[tonumber(tab.Name)]-1)*38+3-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0.0350000001, 190, 0, 785),
+		Size = UDim2.new(0.0350000001, 200, 0, 785),
 	})
 	local frame2 = self:Create("Frame", {
 		Parent = frame,
@@ -435,7 +435,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		end)
 	end
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 190, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return selected
 end
 
