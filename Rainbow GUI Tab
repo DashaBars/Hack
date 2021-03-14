@@ -73,7 +73,7 @@ function library:CreateTab(name, rainbow, color)
 		BackgroundColor3 = Color3.new(1, 1, 1),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, (tabcount)*13+(tabcount-1)*200, 0.0128041022, 0),
-		Size = UDim2.new(0, 200, 0, 30),
+		Size = UDim2.new(0, 200, 0, 40),
 	})
 	local top = self:Create("Frame", {
 		Name = "Top",
@@ -91,7 +91,7 @@ function library:CreateTab(name, rainbow, color)
 		Font = Enum.Font.SourceSansSemibold,
 		Text = name,
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 18,
+		TextSize = 16,
 	})
 	local minimize = self:Create("TextButton", {
 		Parent = top,
@@ -101,7 +101,7 @@ function library:CreateTab(name, rainbow, color)
 		Font = Enum.Font.SourceSansSemibold,
 		Text = "-",
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 14,
+		TextSize = 18,
 	})
 	local rainbow = self:Create("Frame", {
 		Parent = top,
@@ -131,7 +131,7 @@ function library:CreateTab(name, rainbow, color)
 		Parent = holder2,
 		BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647),
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
-		BorderSizePixel = 0,
+		BorderSizePixel = 3,
 		Position = UDim2.new(0, 0, 0, 0),
 		Size = UDim2.new(0, 200, 0, 0),
 		ZIndex = 0,
@@ -176,18 +176,18 @@ function library:MakeButton(tab,text,callback)
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
 		BorderSizePixel = 0,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*38+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 188, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 188, 0, 30),
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text,
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 14,
+		TextSize = 16,
 	})
 	button.MouseButton1Click:Connect(function()
 		callback(button)
 	end)
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*35-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return button
 end
 
@@ -204,29 +204,29 @@ function library:MakeToggle(tab,text,default,callback)
 		BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647),
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
 		BorderSizePixel = 3,
-		Position = UDim2.new(0.744999945, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*38+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 45, 0, 25),
+		Position = UDim2.new(0.744999945, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 45, 0, 30),
 		ZIndex = 2,
 		Font = Enum.Font.SourceSansSemibold,
 		Text = discordid326801946230915102bestslave[1],
 		TextColor3 = discordid326801946230915102bestslave[2],
-		TextSize = 14,
+		TextSize = 16,
 	})
 	local description = self:Create("TextLabel", {
 		Parent = button,
 		BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647),
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
-		BorderSizePixel = 0,
+		BorderSizePixel = 3,
 		Position = UDim2.new(-3.18383813, 0, 0, 0),
-		Size = UDim2.new(0, 143, 0, 25),
+		Size = UDim2.new(0, 143, 0, 30),
 		ZIndex = 0,
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text,
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 14,
+		TextSize = 16,
 	})
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*35-(buttoncount[tonumber(tab.Name)]-1)*6)
 	button.MouseButton1Click:Connect(function()
 		if button.Text == "ON" then
 			button.Text = "OFF"
@@ -246,15 +246,15 @@ function library:MakeLabel(tab,text)
 	local label = self:Create("TextLabel", {
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundTransparency = 1,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*38+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 188, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 188, 0, 30),
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text,
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 14,
+		TextSize = 16,
 	})
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*35-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return label
 end
 
@@ -269,8 +269,8 @@ function library:MakeBox(tab,text,placeholder,callback)
 	local label = self:Create("TextLabel", {
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundTransparency = 1,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*38+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 188, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 188, 0, 30),
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text .. ":",
 		TextColor3 = Color3.new(1, 1, 1),
@@ -281,19 +281,19 @@ function library:MakeBox(tab,text,placeholder,callback)
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.078431),
 		BorderSizePixel = 0,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*38+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 188, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 188, 0, 30),
 		Font = Enum.Font.SourceSansSemibold,
 		PlaceholderText = placeholder,
 		Text = "",
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 14,
+		TextSize = 16,
 	})
 	box.FocusLost:Connect(function()
 		callback(box)
 	end)
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*35-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return box
 end
 
@@ -306,28 +306,28 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 	local label = self:Create("TextLabel", {
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundTransparency = 1,
-		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*38+6-(buttoncount[tonumber(tab.Name)]-1)*6),
-		Size = UDim2.new(0, 188, 0, 25),
+		Position = UDim2.new(0.03, 0, 0, (buttoncount[tonumber(tab.Name)]-1)*35+6-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Size = UDim2.new(0, 188, 0, 30),
 		Font = Enum.Font.SourceSansSemibold,
 		Text = text .. ":",
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 14,
+		TextSize = 16,
 	})
 	buttoncount[tonumber(tab.Name)] = buttoncount[tonumber(tab.Name)]+1
 	local frame = self:Create("Frame", {
 		Parent = tab.ButtonHolder.ButtonHolder.Frame,
 		BackgroundTransparency = 1,
 		ClipsDescendants = true,
-		Position = UDim2.new(0, -3, 0, (buttoncount[tonumber(tab.Name)]-1)*38+3-(buttoncount[tonumber(tab.Name)]-1)*6),
+		Position = UDim2.new(0, -3, 0, (buttoncount[tonumber(tab.Name)]-1)*35+3-(buttoncount[tonumber(tab.Name)]-1)*6),
 		Size = UDim2.new(0.0350000001, 200, 0, 785),
 	})
 	local frame2 = self:Create("Frame", {
 		Parent = frame,
 		BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647),
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
-		BorderSizePixel = 0,
+		BorderSizePixel = 3,
 		Position = UDim2.new(0, 9, 0, 3),
-		Size = UDim2.new(0, 188, 0, 25),
+		Size = UDim2.new(0, 188, 0, 30),
 	})
 	local selected = self:Create("TextLabel", {
 		Parent = frame2,
@@ -336,7 +336,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		Font = Enum.Font.SourceSansSemibold,
 		Text = def,
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 14,
+		TextSize = 16,
 	})
 	local drop = self:Create("TextButton", {
 		Parent = selected,
@@ -347,14 +347,14 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		Font = Enum.Font.SourceSansSemibold,
 		Text = ">",
 		TextColor3 = Color3.new(1, 1, 1),
-		TextSize = 14,
+		TextSize = 16,
 		TextWrapped = true,
 	})
 	local dropdowns = self:Create("Frame", {
 		Parent = frame2,
 		BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647),
 		BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314),
-		BorderSizePixel = 0,
+		BorderSizePixel = 3,
 		Position = UDim2.new(0, 0, 0, 0),
 		Size = UDim2.new(0, 188, 0, 0),
 		ZIndex = 0,
@@ -399,7 +399,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 			Font = Enum.Font.SourceSansSemibold,
 			Text = v,
 			TextColor3 = Color3.new(1, 1, 1),
-			TextSize = 14,
+			TextSize = 16,
 		})
 		dropdowns.Size = UDim2.new(0, 188, 0, i*38)
 		button.MouseButton1Click:Connect(function()
@@ -435,7 +435,7 @@ function library:MakeDropdown(tab,text,drops,default,callback)
 		end)
 	end
 	tab.ButtonHolder.ButtonHolder.Frame.BackgroundTransparency = 0
-	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*38-(buttoncount[tonumber(tab.Name)]-1)*6)
+	tab.ButtonHolder.ButtonHolder.Frame.Size = UDim2.new(0, 200, 0, buttoncount[tonumber(tab.Name)]*35-(buttoncount[tonumber(tab.Name)]-1)*6)
 	return selected
 end
 
