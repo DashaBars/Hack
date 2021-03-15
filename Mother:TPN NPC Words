@@ -58,9 +58,9 @@
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 	end)
 	
-	local button = library:MakeButton(tab1,"I love you",function(button)
+	local button = library:MakeButton(tab1,"I love you!",function(button)
   	local args = {
-  	[1] = "I love you",
+  	[1] = "I love you!",
   	[2] = "All"
 	}
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
@@ -101,6 +101,30 @@
 	local button = library:MakeButton(tab1,"Sure",function(button)
   	local args = {
   	[1] = "Sure",
+  	[2] = "All"
+	}
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	end)
+	
+	local button = library:MakeButton(tab1,"2 + 10 = 12",function(bool)
+  	local args = {
+  	[1] = "2 + 10 = 12",
+  	[2] = "All"
+	}
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	end)
+	
+	local button = library:MakeButton("10 + 8 = 18",function(bool)
+  	local args = {
+  	[1] = "10 + 8 = 18",
+  	[2] = "All"
+	}
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	end)
+	
+	local button = library:MakeButton("3 + 10 = 13",function(bool)
+  	local args = {
+  	[1] = "3 + 10 = 13",
   	[2] = "All"
 	}
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
