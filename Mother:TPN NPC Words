@@ -49,6 +49,22 @@
 	}
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 	end)
+	
+	local button = library:MakeButton(tab1,"...",function(button)
+  	local args = {
+  	[1] = "...",
+  	[2] = "All"
+	}
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	end)
+	
+	local button = library:MakeButton(tab1,"I love you",function(button)
+  	local args = {
+  	[1] = "I love you",
+  	[2] = "All"
+	}
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	end)
 
 	local button = library:MakeButton(tab1,"I'm hungry",function(button)
   	local args = {
@@ -85,6 +101,14 @@
 	local button = library:MakeButton(tab1,"Sure",function(button)
   	local args = {
   	[1] = "Sure",
+  	[2] = "All"
+	}
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	end)
+	
+	local button = library:MakeButton(tab1,"Can you help me?",function(button)
+  	local args = {
+  	[1] = "Can you help me?",
   	[2] = "All"
 	}
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
