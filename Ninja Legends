@@ -1,0 +1,282 @@
+                local player = game.Players.LocalPlayer
+                local library = loadstring(game:HttpGet('https://pastebin.com/raw/JsdM2jiP', true))()
+                library.options.underlinecolor = 'rainbow'
+
+                local Farming = library:CreateWindow('Farming')
+                local Swing = Farming:Toggle('Auto-Swing', { flag = 'Swing'})
+                local Kat = Farming:Button('---', function()
+                loadstring(game: HttpGet('https://pastebin.com/raw/2qKmDuiy', true))()
+                end)
+
+                local AutoBuy = library:CreateWindow('Auto Buy')
+                local Sword = AutoBuy:Toggle('Auto-Sword', { flag = 'Sword'})
+                local Belt = AutoBuy:Toggle('Auto-Belt', { flag = 'Belt'})
+                local Rank = AutoBuy:Toggle('Auto-Rank', { flag = 'Rank'})
+                local Skill = AutoBuy:Toggle('Auto-Skills', { flag = 'Skill'})
+                local Shuriken = AutoBuy:Toggle('Auto-Shurikens', { flag = 'Shurikens'})
+                _G.Enabled = AutoBuy.flags.Purchase
+                _G.Sword = AutoBuy.flags.Sword
+                _G.Belt = AutoBuy.flags.Belt
+                _G.Rank = AutoBuy.flags.Rank
+                _G.Skill = AutoBuy.flags.Skill
+
+                local Misc = library:CreateWindow('Misc')
+
+                local Invis = Misc:Button('Invisibile', function()
+                while true do
+                                    wait(.0)
+                local A_1 = 'goInvisible'
+                local Event = game.Players.LocalPlayer.ninjaEvent
+                Event: FireServer(A_1)
+                end
+                end)
+
+                local MaxJump = Misc:Button('Max Jump', function()
+                while true do
+                                    wait(.0)
+                game.Players.LocalPlayer.multiJumpCount.Value = '999'
+                end
+                end)
+
+                local UnlockIsland = Misc:Button('Unlock Islands', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Enchanted Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Astral Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Mystical Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Space Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Tundra Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Eternal Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Sandstorm'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Thunderstorm'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Ancient Inferno Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Midnight Shadow Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Mythical Souls Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Winter Wonder Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Golden Master Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Dragon Legend Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Cybernetic Legends Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Skystorm Ultraus Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Chaos Legends Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Soul Fusion Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Dark Elements Island'].CFrame
+                wait(.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Inner Peace Island'].CFrame
+                end)
+
+                local Teleports = library:CreateWindow('Islands')
+
+                local Enchanted = Teleports:Button('Enchanted Island', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Enchanted Island'].CFrame
+                end)
+                local Astral = Teleports:Button('Astral Island', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Astral Island'].CFrame
+                end)
+                local Mystical = Teleports:Button('Mystical Island', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Mystical Island'].CFrame
+                end)
+                local SpaceIsland = Teleports:Button('Space Island', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Space Island'].CFrame
+                end)
+                local Tundra = Teleports:Button('Tundra Island', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Tundra Island'].CFrame
+                end)
+                local Eternal = Teleports:Button('Eternal Island', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Eternal Island'].CFrame
+                end)
+                local Sandstorm = Teleports:Button('Sandstorm Island', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Sandstorm'].CFrame
+                end)
+                local Thunderstorm = Teleports:Button('Thunderstorm Island', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Thunderstorm'].CFrame
+                end)
+                local Ancient = Teleports:Button('Ancient Island', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Ancient Inferno Island'].CFrame
+                end)
+                local Midnight = Teleports:Button('Midnight Shadow', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Midnight Shadow Island'].CFrame
+                end)
+                local Mytical = Teleports:Button('Mythical Souls', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Mythical Souls Island'].CFrame
+                end)
+                local Winter = Teleports:Button('Winter Wonder', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Winter Wonder Island'].CFrame
+                end)
+                local Golden = Teleports:Button('Golden Master', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Golden Master Island'].CFrame
+                end)
+                local Dragon = Teleports:Button('Dragon Legend', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Dragon Legend Island'].CFrame
+                end)
+                local Cybernetic = Teleports:Button('Cybernetic Legends', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Cybernetic Legends Island'].CFrame
+                end)
+                local Skystorm = Teleports:Button('Skystorm Ultraus', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Skystorm Ultraus Island'].CFrame
+                end)
+                local Chaos = Teleports:Button('Chaos Legends', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Chaos Legends Island'].CFrame
+                end)
+                local Soul = Teleports:Button('Soul Fusion', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Soul Fusion Island'].CFrame
+                end)
+                local Dark = Teleports:Button('Dark Elements', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Dark Elements Island'].CFrame
+                end)
+                local Inner = Teleports:Button('Inner Peace', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').islandUnlockParts['Inner Peace Island'].CFrame
+                end)
+
+                local Teleports = library:CreateWindow('Teleports')
+
+                local KOTH = Teleports:Button('KOTH', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService('Workspace').kingOfTheHillPart.CFrame
+                end)
+                local a1 = Teleports:Button('Zen Master Blade (GK)', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (5021.71582, 39.537487, 1611.77124)
+                end)
+                local a2 = Teleports:Button('Fallen Infinity Blade (BK)', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (1856.56409, 39.537487, -6797.55322)
+                end)
+                local a3 = Teleports:Button('Spawn', function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (0, 0, 0)
+                end)
+
+                spawn(function()
+                while wait() do
+                                    if Farming.flags.Swing then
+                if game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart') then
+                if game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool') then
+                game.Players.LocalPlayer.ninjaEvent:FireServer('swingKatana')
+                else
+                                for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                        if v.ClassName == 'Tool' and v:FindFirstChild('attackShurikenScript') then
+                game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+                wait()
+                if v.ClassName == 'Tool' and v:FindFirstChild('attackKatanaScript') then
+                game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+                end
+                end
+                end
+                end
+                end
+                end
+                end
+                end)
+
+                spawn(function()
+                while wait(0.5) do
+                                    if AutoBuy.flags.Sword then
+                if game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart') then
+                local oh1 = 'buyAllSwords'
+                local oh2 = { 'Ground', 'Astral Island', 'Space Island', 'Tundra Island', 'Eternal Island', 'Sandstorm', 'Thunderstorm', 'Ancient Inferno Island', 'Midnight Shadow Island', 'Mythical Souls Island', 'Winter Wonder Island', 'Golden Master Island', 'Dragon Legend Island', 'Cybernetic Legends Island', 'Skystorm Ultraus Island', 'Chaos Legends Island', 'Soul Fusion Island', 'Dark Elements Island', 'Inner Peace Island' }
+                for i = 1,#oh2 do
+                game:GetService('Players').LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+                end
+                end
+                end
+                end
+                end)
+
+                                spawn(function()
+                while wait(0.5) do
+                                    if AutoBuy.flags.Belt then
+                if game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart') then
+                local oh1 = 'buyAllBelts'
+                local oh2 = { 'Ground', 'Astral Island', 'Space Island', 'Tundra Island', 'Eternal Island', 'Sandstorm', 'Thunderstorm', 'Ancient Inferno Island', 'Midnight Shadow Island', 'Mythical Souls Island', 'Winter Wonder Island', 'Golden Master Island', 'Dragon Legend Island', 'Cybernetic Legends Island', 'Skystorm Ultraus Island', 'Chaos Legends Island', 'Soul Fusion Island', 'Dark Elements Island', 'Inner Peace Island' }
+                for i = 1,#oh2 do
+                game:GetService('Players').LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+                end
+                end
+                end
+                end
+                end)
+
+                                spawn(function()
+                while wait(0.5) do
+                                    if AutoBuy.flags.Skill then
+                if game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart') then
+                local oh1 = 'buyAllSkills'
+                local oh2 = { 'Ground', 'Astral Island', 'Space Island', 'Tundra Island', 'Eternal Island', 'Sandstorm', 'Thunderstorm', 'Ancient Inferno Island', 'Midnight Shadow Island', 'Mythical Souls Island', 'Winter Wonder Island', 'Golden Master Island', 'Dragon Legend Island', 'Cybernetic Legends Island', 'Skystorm Ultraus Island', 'Chaos Legends Island', 'Soul Fusion Island', 'Dark Elements Island', 'Inner Peace Island' }
+                for i = 1,#oh2 do
+                game:GetService('Players').LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+                end
+                end
+                end
+                end
+                end)
+
+
+
+                                spawn(function()
+                while wait(0.5) do
+                                    if AutoBuy.flags.Rank then
+                if game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart') then
+                local oh1 = 'buyRank'
+                local oh2 = game:GetService('ReplicatedStorage').Ranks.Ground:GetChildren()
+                for i = 1,#oh2 do
+                game:GetService('Players').LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i].Name)
+                end
+                end
+                end
+                end
+                end)
+
+                                spawn(function()
+                while wait(0.5) do
+                                    if AutoBuy.flags.Shurikens then
+                if game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart') then
+                local oh1 = 'buyAllShurikens'
+                local oh2 = { 'Ground', 'Astral Island', 'Space Island', 'Tundra Island', 'Eternal Island', 'Sandstorm', 'Thunderstorm', 'Ancient Inferno Island', 'Midnight Shadow Island', 'Mythical Souls Island', 'Winter Wonder Island', 'Golden Master Island', 'Dragon Legend Island', 'Cybernetic Legends Island', 'Skystorm Ultraus Island', 'Chaos Legends Island', 'Soul Fusion Island', 'Dark Elements Island', 'Inner Peace Island' }
+                for i = 1,#oh2 do
+                game:GetService('Players').LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+                end
+                end
+                end
+                end
+                end)
+
+                spawn(function()
+                while wait(.001) do
+                                    if Misc.flags.Fast then
+                if game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart') then
+                local plr = game.Players.LocalPlayer
+                local Mouse = plr:GetMouse()
+                local velocity = 1000
+                for _, p in pairs(game.Workspace.shurikensFolder:GetChildren()) do
+                                    if p.Name == 'Handle' then
+                if p:FindFirstChild('BodyVelocity') then
+                local bv = p:FindFirstChildOfClass('BodyVelocity')
+                bv.MaxForce = Vector3.new (math.huge, math.huge, math.huge)
+                bv.Velocity = Mouse.Hit.lookVector * velocity
+                end
+                end
+                end
+                end
+                end
+                end
+                end)
+
+                local vu = game:GetService('VirtualUser')
+                game: GetService('Players').LocalPlayer.Idled:connect(
+                 function()
+                 vu: Button2Down(Vector2.new (0, 0), workspace.CurrentCamera.CFrame)
+                wait(1)
+                vu: Button2Up(Vector2.new (0, 0), workspace.CurrentCamera.CFrame)
+                end)
