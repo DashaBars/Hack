@@ -152,5 +152,19 @@
 		local Teleports = library:CreateWindow('Crystal Factory (Lasers)')
 		
 		local Laser = Teleports:Button('Lasers', function()
+		--------------------------------------------------------
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
+		-------------------------------------------------------
 		game.workspace.CrystalFactory.Lasers:Destroy()
 		end)
