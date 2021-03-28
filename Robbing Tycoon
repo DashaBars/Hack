@@ -165,6 +165,9 @@
 		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
 		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
 		game.workspace.CrystalFactory.FinalFloor.Lazer:Destroy()
-		-------------------------------------------------------
 		game.workspace.CrystalFactory.Lasers:Destroy()
+		-------------------------------------------------------
+		game.workspace.Beach.Robbery.Lasers:Destroy()
+		game.workspace.Jail.Lasers:Destroy()
+		game.workspace.Jail.Underground:Destroy()
 		end)
