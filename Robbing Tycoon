@@ -73,6 +73,15 @@
 		local Bank = Teleports:Button('Underwater Bank (2)', function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-387, -72, -655)
 		end)
+		local House = Teleports:Button('Haunted House (1)', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-929, 104, 367)
+		end)
+		local House = Teleports:Button('Haunted House (2)', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-900, 91, 381)
+		end)
+		local Alien = Teleports:Button('Alien Chest', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (172, 114, 99)
+		end)
 
 		local Teleports = library:CreateWindow('National bank')
 
