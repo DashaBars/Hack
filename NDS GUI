@@ -1,3 +1,1 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/DashaBars/Hack/main/NDS%20GUI',true))()
-
-game.workspace.FallenPartsDestroyHeight = -50000
